@@ -13,9 +13,10 @@
 
 ## Usage
 
-> NOTE: It uses a [Nerdfont](https://www.nerdfonts.com/font-downloads) for the icons, so it is recommended to have a Nerdfont set as your terminal font
+> NOTE: It uses a [Nerdfont](https://www.nerdfonts.com/font-downloads) by default for the icons, so it is recommended to have a Nerdfont set as your terminal font
 
 1. Install [TPM](https://github.com/tmux-plugins/tpm)
+<br>
 
 2. Add the Rosé Pine plugin with the following lines:
 
@@ -25,14 +26,21 @@ set -g @plugin 'rose-pine/tmux'
 set -g @plugin 'tmux-plugins/tpm'
 # To update plugin for future revisions or bug fixes, do the "Prefix + U" keycombo
 ```
+<br>
 
 3. Set your preferred variant:
 
 ```bash
 set -g @rose_pine_variant 'main' # Options are 'main', 'moon' or 'dawn'
 ```
+<br>
 
-4. Also optional but recommended: Activate the extra modules, they are enabled by writing 'on' after the option name
+4. After adding TPM and the Rosé Pine theme to `.tmux.conf`, restart tmux and use the <kbd>Prefix + I</kbd> (capital I) combo to source your configuration.
+For updating the plugin, the key combination is <kbd>Prefix + U</kbd> (which TPM sets by default).
+<br>
+
+
+5. Optional but recommended: Activate the extra modules, they are enabled by writing 'on' after the option name
 ```bash
 set -g @rose_pine_host 'on' # Enables hostname in the status bar
 set -g @rose_pine_date_time '' # It accepts the date UNIX command format (man date for info)
@@ -40,6 +48,7 @@ set -g @rose_pine_user 'on' # Turn on the username component in the statusbar
 set -g @rose_pine_bar_bg_disable 'on' 
 # If set to 'on', disables background color, for transparent terminal emulators
 set -g @rose_pine_only_windows 'on' # Leaves only the window module, for max focus and space
+set -g @rose_pine_disable_active_window_menu 'on' # Disables the menu that shows the active window on the left
 
 set -g @rose_pine_default_window_behavior 'on' # Forces tmux default window list behaviour
 set -g @rose_pine_show_current_program 'on' # Forces tmux to show the current running program as window name
